@@ -7,22 +7,82 @@
     --color-dark-card: #0B0E12;
     --color-dark-border: #2c2c2c;
 
-    --color-primary: #e9355a;
-    --color-secondary: #6c4ef6;
-    --color-green: #22c55e;
-    --color-orange: #f97316;
-    --color-red: #ef4444;
-    --color-yellow: #facc15;
+    --color-primary: #43AD28;
+    --color-orange: #EB6402;
+    --color-error-100: #EB0237;
+    --color-error-300: #A01131;
 
     --color-light: #ffffff;
     --color-light-gray: #B4B5B6;
     --color-light-dark: #FAFAFA66;
 }
 
+@layer components {
+    /*BUTTON -------------------*/
+    .primary {
+        background: var(--color-error-100);
+        padding: 17px 40px;
+        border-radius: 4px;
+    }
+
+    /*FONT -------------------*/
+    .tacticSans {
+        font-family: var(--font-tacticSans), sans-serif;
+        font-weight: 400;
+        font-size: clamp(1.5625rem, 5vw, 2rem);
+        line-height: 100%;
+    }
+
+    .inter12Bold {
+        font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 100%;
+    }
+
+    .inter16Bold {
+        font-size: clamp(0.875rem, 5vw, 1rem);
+        font-weight: 600;
+        line-height: 100%;
+    }
+
+    .inter18Bold {
+        font-size: clamp(1rem, 5vw, 1.125rem);
+        font-weight: 600;
+        line-height: 100%;
+    }
+
+    .inter18Reg {
+        font-size: clamp(1rem, 5vw, 1.125rem);
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    .inter20Bold {
+        font-size: clamp(1rem, 5vw, 1.25rem);
+        font-weight: 600;
+        line-height: 100%;
+    }
+
+    .medium {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: clamp(0.875rem, 5vw, 1rem);
+        line-height: 150%;
+    }
+
+    .base {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 150%;
+    }
+
+
+}
 
 :root {
-    --background: var(--color-light);
-    --foreground: var(--color-dark-bg);
+    --background: var(--color-dark-bg);
+    --foreground: var(--color-light);
 }
 
 body {
