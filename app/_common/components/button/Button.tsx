@@ -11,5 +11,5 @@ type Props = {
 export const Button = ({ variant = "primary", fullWidth = false, asChild, className, ...props }: Props) => {
   const Comp = asChild ? Slot : "button";
 
-  return <Comp {...props} className={cn("text-light", variant, fullWidth && "w-full", className)} />;
+  return <Comp {...props} className={cn("text-light px-[40px] py-5", variant, fullWidth && "w-full", className)} />;
 };
