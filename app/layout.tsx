@@ -1,7 +1,12 @@
-import type {Metadata} from "next";
-import {ReactNode} from "react";
+import type { Metadata } from "next";
+import { ReactNode } from "react";
+import { cn } from "@/app/_common/utils";
+
 import "./globals.css";
 
+import { tacticSans } from "@/app/_common/utils";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -9,17 +14,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-                                     children,
-                                   }: Readonly<{
+  children,
+}: Readonly<{
   children: ReactNode;
 }>) {
   return (
     <html lang="en">
-    <body
-      className={``}
-    >
-    {children}
-    </body>
+      <body className={cn(tacticSans.variable)}>{children}</body>
     </html>
   );
 }

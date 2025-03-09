@@ -4,6 +4,9 @@ export default {
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      fontFamily: {
+        tactic: ["var(--font-tacticSans)"],
+      },
       colors: {
         dark: {
           DEFAULT: "#0f0f0f",
