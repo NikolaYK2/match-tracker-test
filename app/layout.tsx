@@ -21,7 +21,9 @@ export default function RootLayout({
   useLoader();
   return (
     <html lang="en">
-      <body className={cn(tacticSans.variable)}>{children}</body>
+      <body className={cn(tacticSans.variable)}>
+        <main className={"max-w-[1836px] mx-auto"}>{children}</main>
+      </body>
     </html>
   );
 }
