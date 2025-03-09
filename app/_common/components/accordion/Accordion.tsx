@@ -1,6 +1,19 @@
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from "react";
 import { cn } from "@/app/_common/utils";
+import { Icon } from "@/app/_common/components/icons";
+
+/**
+ * <Accordion type="single" collapsible>
+ *   <AccordionItem value="item-1">
+ *     <AccordionTrigger>Is it accessible?</AccordionTrigger>
+ *
+ *     <AccordionContent>
+ *       Yes. It adheres to the WAI-ARIA design pattern.
+ *     </AccordionContent>
+ *   </AccordionItem>
+ * </Accordion>
+ */
 
 const Accordion = AccordionPrimitive.Root;
 
@@ -20,13 +33,14 @@ const AccordionTrigger = forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline text-left [&[data-state=open]>svg]:rotate-180 bg-dark-card",
+        "relative flex flex-1 items-center justify-between py-5 px-4 pr-14 transition-all bg-dark-card cursor-pointer rounded-[4px]",
+        "[&[data-state=open]>svg]:scale-y-[-1] [&>svg]:transition-transform [&>svg]:duration-200 ",
         className,
       )}
       {...props}
     >
       {children}
-      <div>Icon</div>
+      <Icon className={"absolute right-5.5"} iconId={"Chevron"} />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
@@ -38,7 +52,7 @@ const AccordionContent = forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down bg-dark-card"
+    className={cn("overflow-hidden bg-dark-card animate-accordion-down ", "data-[state=closed]:animate-accordion-up")}
     {...props}
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
