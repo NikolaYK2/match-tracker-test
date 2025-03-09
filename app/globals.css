@@ -3,9 +3,8 @@
 @theme {
     --font-tacticSans: "var(--font-tacticSans)";
 
-    --color-dark: #0f0f0f;
-    --color-dark-bg: #1a1a1a;
-    --color-dark-card: #222222;
+    --color-dark-bg: #06080C;
+    --color-dark-card: #0B0E12;
     --color-dark-border: #2c2c2c;
 
     --color-primary: #e9355a;
@@ -22,8 +21,8 @@
 
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --background: var(--color-light);
+    --foreground: var(--color-dark-bg);
 }
 
 body {
