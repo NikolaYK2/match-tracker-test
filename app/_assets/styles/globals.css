@@ -5,6 +5,8 @@
 
     --color-dark-bg: #06080C;
     --color-dark-card: #0B0E12;
+    --color-dark-card-100: #101318;
+    --color-dark-card-300: #0F1318;
     --color-dark-border: #2c2c2c;
 
     --color-primary: #43AD28;
@@ -21,6 +23,14 @@
     /*BUTTON -------------------*/
     .primary {
         background: var(--color-error-100);
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background .3s ease;
+
+        &:hover {
+            background: var(--color-error-300);
+            transition: background .3s ease;
+        }
     }
 
     /*FONT -------------------*/
@@ -77,6 +87,40 @@
 
 
 }
+
+@layer utilities {
+
+    .animate-accordion-down {
+        animation: accordion-down 1s ease-out;
+    }
+
+    .animate-accordion-up {
+        animation: accordion-up 1s ease-out;
+    }
+
+    @keyframes accordion-down {
+        from {
+            max-height: 0;
+
+        }
+        to {
+            max-height: 500px;
+        }
+    }
+
+    @keyframes accordion-up {
+        from {
+            max-height: 500px;
+
+        }
+        to {
+            max-height: 0;
+
+        }
+    }
+
+}
+
 
 :root {
     --background: var(--color-dark-bg);
