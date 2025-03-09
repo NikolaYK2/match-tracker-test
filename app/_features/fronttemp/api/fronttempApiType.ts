@@ -17,8 +17,13 @@ export type Match = {
   homeScore: number;
   homeTeam: Team;
   time: string;
+  status: string;
+  title: string;
 };
 
+export type Matches = {
+  matches: Match[];
+};
 export type Response<T> = {
   data: T;
 };
