@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { ReactNode } from "react";
 import { cn } from "@/app/_common/utils";
 
-import "./globals.css";
-
 import { tacticSans } from "@/app/_common/utils";
+
 import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
