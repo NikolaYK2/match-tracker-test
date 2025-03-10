@@ -36,7 +36,7 @@ export const MatchItem = ({ match }: Props) => {
         </div>
         <Team name={match.homeTeam.name} className="flex-row-reverse" />
       </AccordionTrigger>
-      <AccordionContent className="flex items-center justify-between">
+      <AccordionContent className="flex items-center justify-between p-4">
         <TeamItem team={match.homeTeam} />
         <TeamItem team={match.awayTeam} />
       </AccordionContent>
